@@ -118,11 +118,23 @@ EOF
 ```
 
 ```bash
+sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+
+```
+
+```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
 br_netfilter
 EOF
 ```
+
+```bash
+modprobe br_netfilter overlay
+modprobe br_netfilter overlay && lsmod | grep br && lsmod | grep ov
+```
+
+
  *These parameters and modules are needed for Kubernetes networking to function properly.*
 
  -----
