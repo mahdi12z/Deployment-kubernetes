@@ -4,6 +4,20 @@
 This guide walks you through setting up a Kubernetes Master Node on Ubuntu with detailed explanations for every step. It uses `kubeadm`, `containerd` as the container runtime, and Flannel as the CNI plugin.
 
 ----
+```bash
+sudo nft delete table ip nat
+sudo nft flush ruleset
+sudo nft list ruleset
+sudo systemctl stop nftables
+sudo systemctl disable nftables
+sudo rm -f /etc/nftables.conf
+sudo apt purge nftables -y
+sudo apt autoremove --purge -y
+which nft
+nft --version
+```
+
+
 
 ## 1 Set the Hostname
 
