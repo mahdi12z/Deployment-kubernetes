@@ -102,6 +102,14 @@ vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
 network: {config: disabled}
 
 ```
+
+```bash
+sudo iptables -F
+sudo iptables -t nat -F
+sudo iptables -X
+sudo iptables -t nat -X
+
+```
 ----
 
 ## 5 Setup and Configure NTP
