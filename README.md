@@ -86,6 +86,16 @@ nameserver 172.22.122.101
 ```bash
 sudo chattr +i /etc/resolv.conf
 ```
+
+```bash
+sudo apt update
+sudo apt install openvswitch-switch
+sudo systemctl enable ovsdb-server
+sudo systemctl start ovsdb-server
+sudo systemctl enable openvswitch-switch
+sudo systemctl start openvswitch-switch
+
+```
 ----
 
 ## 5 Setup and Configure NTP
