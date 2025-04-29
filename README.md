@@ -108,6 +108,7 @@ sudo iptables -F
 sudo iptables -t nat -F
 sudo iptables -X
 sudo iptables -t nat -X
+sudo systemctl restart kubelet
 
 ```
 ----
