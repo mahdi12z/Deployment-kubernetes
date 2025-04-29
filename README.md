@@ -96,6 +96,12 @@ sudo systemctl enable openvswitch-switch
 sudo systemctl start openvswitch-switch
 
 ```
+
+```bash
+vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+network: {config: disabled}
+
+```
 ----
 
 ## 5 Setup and Configure NTP
